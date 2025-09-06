@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background: linear-gradient(to left, #2C5364, #203A43, #0F2027);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    background: #0F2027;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(50, 1fr);
+    grid-template-rows: repeat(50, 1fr);
+    flex-shrink: 0;
+}
+
+.snake {
+    background-color: #85FFBD;
+    background-image: linear-gradient(45deg, #e7ff85 0%, #FFFB7D 100%);
+    width: 15px;
+    height: 15px;
+    border-radius: 5px;
+}
+
+.food {
+    background-color: #F4D03F;
+    /* background-image: linear-gradient(132deg, #677b3d 0%, #b6dfd6 100%); */
+    border: 2px solid rgb(20, 216, 222);
+    width: 15px;
+    height: 15px;
+    border-radius: 5px;
+}
+
+.score {
+    min-width: 100vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: white;
+}
+
+.controll {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 40px 40px;
+    grid-template-rows: 40px 40px 40px;
+    column-gap: 30px;
+    /* row-gap: 30px; */
+    /* cursor: pointer; */
+    bottom: 120px;
+}
+
+.upArrow2 {
+    width: 50px;
+    height: 70px;
+    background-color: gray;
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.893) 5px 19px 38px, rgb(0, 0, 0) 5px 15px 12px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 50% 100%, 0% 60%);
+    border-radius: 40px;
+}
+
+.upArrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.leftArrow{
+    position: relative;
+    left: -20px;
+}
+
+.leftArrow2 {
+    width: 50px;
+    height: 70px;
+    background-color: gray;
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.893) 5px 19px 38px, rgb(0, 0, 0) 5px 15px 12px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 50% 100%, 0% 60%);
+    border-radius: 40px;
+    transform: rotate(270deg);
+    left: 15px;
+}
+
+.rightArrow2 {
+    width: 50px;
+    height: 70px;
+    background-color: gray;
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.893) 5px 19px 38px, rgb(0, 0, 0) 5px 15px 12px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 50% 100%, 0% 60%);
+    border-radius: 40px;
+    transform: rotate(90deg);
+}
+
+.rightArrow {
+    position: relative;
+    left: 8px;
+}
+
+.DownArrow2 {
+    width: 50px;
+    height: 70px;
+    background-color: gray;
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.893) 5px 19px 38px, rgb(0, 0, 0) 5px 15px 12px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 50% 100%, 0% 60%);
+    border-radius: 40px;
+    transform: rotate(180deg);
+}
+
+.DownArrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    /* row-gap: 20px; */
+    position: relative;
+    top: 15px;
+}
+
+.score h1 {
+    text-align: center;
+}
+
+.instruction {
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    color: white;
+    font-size: 1.3rem;
+}
+
+.inialized {
+    transform: rotate(-90deg);
+    position: relative;
+    top: 10px;
+    color: red;
+}
+
+@media (width>=380px){
+    .controll{
+        bottom: 0px;
+    }
+}
+
+@media (width>800px) {
+    .container {
+        width: 33.34%;
+    }
+
+    .snake {
+        width: 25px;
+        height: 25px;
+    }
+
+    .food {
+        width: 25px;
+        height: 25px;
+    }
+
+    .score {
+        left: 20px;
+        top: auto;
+        /* bottom: auto; */
+    }
+
+    .score h1 {
+        text-align: left;
+    }
+
+    .startGame {
+        position: absolute;
+        top: 0;
+        color: yellow;
+    }
+
+    .snakepicc {
+        position: absolute;
+        width: 30%;
+        height: 100%;
+        right: auto;
+    }
+    .controll{
+        right: 40px;
+        bottom: auto;
+    }
+}
+
+@media (width<=800px) {
+    .startGame {
+        display: none;
+    }
+
+    .snakepicc {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        right: auto;
+    }
+
+    .snakepicc img {
+        width: 100%;
+        position: absolute;
+        bottom: 620px;
+    }
+
+    .instruction {
+        display: none;
+    }
+}
