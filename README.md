@@ -4,7 +4,7 @@ A fun and interactive Snake Game built for the web! Play directly in your browse
 
 🚀 Features
 
-🎮 Classic Snake Gameplay – Eat food, grow longer, and avoid hitting yourself or walls.
+🎮 Classic Snake Gameplay – Eat food, grow longer, and avoid hitting yourself or walls. 
 
 🖥️ Responsive Design – Works smoothly on desktop and mobile.
 
