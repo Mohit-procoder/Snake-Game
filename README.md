@@ -1,4 +1,4 @@
-   🐍 Snake Game Website 
+    🐍 Snake Game Website 
 A fun and interactive Snake Game built for the web! Play directly in your browser and test your reflexes as you guide the snake to eat food, grow longer, and avoid collisions.
 
 🚀 Features
